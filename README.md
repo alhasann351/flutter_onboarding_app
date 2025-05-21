@@ -1,16 +1,23 @@
-# flutter_onboarding_app
+# Flutter Onboarding App
 
 A new Flutter Onboarding App project.
 
-## Getting Started
+## Project Objective
+Build a Flutter Onboarding App project that includes:
+ -Onboarding screens
+ -Location permission prompt
+ -Alarm/Notification setting functionality
 
-This project is a starting point for a Flutter application.
+## Tools
+    -Android Studio
 
-A few resources to get you started if this is your first Flutter project:
+## Packages
+    -get: ^4.7.2
+    -smooth_page_indicator: ^1.2.1
+    -auto_size_text: ^3.0.0
+    -geolocator: ^14.0.0
+    -geocoding: ^3.0.0
+    -flutter_local_notifications: ^19.2.1
+    -timezone: ^0.10.1
+    -intl: ^0.20.2
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
