@@ -46,7 +46,6 @@ class OnboardingPage1 extends StatelessWidget {
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
-                    //fontSize: fontSize,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.bold,
                   ),
@@ -66,22 +65,24 @@ class OnboardingPage1 extends StatelessWidget {
             ],
           ),
           Positioned(
-            top: 32,
+            top: 16,
             right: 10,
-            child: TextButton(
-              onPressed: () {
-                Get.offAllNamed(AppRoutes.locationPermissionScreen);
-              },
-              child: const AutoSizeText(
-                AppString.skip,
-                minFontSize: 16,
-                maxFontSize: 16,
-                maxLines: 4,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  fontFamily: 'Oxygen',
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.buttonTextColor,
+            child: SafeArea(
+              child: TextButton(
+                onPressed: () {
+                  Get.offAllNamed(AppRoutes.locationPermissionScreen);
+                },
+                child: const AutoSizeText(
+                  AppString.skip,
+                  minFontSize: 16,
+                  maxFontSize: 16,
+                  maxLines: 4,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontFamily: 'Oxygen',
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.buttonTextColor,
+                  ),
                 ),
               ),
             ),

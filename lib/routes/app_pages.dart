@@ -1,3 +1,4 @@
+import 'package:flutter_onboarding_app/features/alarm/screens/alarm_screen.dart';
 import 'package:flutter_onboarding_app/routes/app_routes.dart';
 import 'package:get/get.dart';
 
@@ -14,5 +15,6 @@ class AppPages {
       name: AppRoutes.locationPermissionScreen,
       page: () => const LocationPermissionScreen(),
     ),
+    GetPage(name: AppRoutes.alarmScreen, page: () => AlarmScreen()),
   ];
 }

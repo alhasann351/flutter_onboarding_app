@@ -5,12 +5,14 @@ import 'package:flutter_onboarding_app/constants/app_colors.dart';
 class CustomElevatedButton extends StatelessWidget {
   final String text;
   final Color backgroundColor;
+  final Image? image;
   final VoidCallback onPressed;
 
   const CustomElevatedButton({
     super.key,
     required this.text,
     required this.backgroundColor,
+    this.image,
     required this.onPressed,
   });
 
@@ -31,18 +33,42 @@ class CustomElevatedButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(8.0),
           ),
         ),
-        child: AutoSizeText(
-          text,
-          minFontSize: 16,
-          maxFontSize: 16,
-          maxLines: 4,
-          overflow: TextOverflow.ellipsis,
-          style: const TextStyle(
-            fontFamily: 'Oxygen',
-            fontWeight: FontWeight.bold,
-            color: AppColors.buttonTextColor,
-          ),
-        ),
+        child:
+            image != null
+                ? Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  spacing: 8.0,
+                  children: [
+                    Flexible(
+                      flex: 3,
+                      child: AutoSizeText(
+                        text,
+                        minFontSize: 16,
+                        maxFontSize: 16,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w400,
+                          color: AppColors.buttonTextColor,
+                        ),
+                      ),
+                    ),
+                    Flexible(flex: 1, child: image!),
+                  ],
+                )
+                : AutoSizeText(
+                  text,
+                  minFontSize: 16,
+                  maxFontSize: 16,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                    color: AppColors.buttonTextColor,
+                  ),
+                ),
       ),
     );
   }
