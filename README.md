@@ -3,10 +3,10 @@
 A new Flutter Onboarding App project.
 
 ## Project Objective
-Build a Flutter Onboarding App project that includes:
- -Onboarding screens
- -Location permission prompt
- -Alarm/Notification setting functionality
+    Build a Flutter Onboarding App project that includes:
+     -Onboarding screens
+     -Location permission prompt
+     -Alarm/Notification setting functionality
 
 ## Tools
     -Android Studio
